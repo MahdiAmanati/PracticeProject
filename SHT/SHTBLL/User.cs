@@ -19,6 +19,19 @@ namespace SHT.SHTBLL
         public string UserName { get; set; }
         public string Password { get; set; }
 
+        public bool Select_EnrerUser()
+        {
+            SHTDATA.User userCrud = new SHTDATA.User()
+            {
+                Password = this.Password,
+                UserName = this.UserName,
+            };
+            bool message = userCrud.Select_EnrerUser();
+            if (message)
+                return true;
+            else
+                return false;
+        }
         public bool DeleteUser()
         {
                 SHTDATA.User userCrud = new SHTDATA.User()
@@ -69,8 +82,11 @@ namespace SHT.SHTBLL
                     Password = this.Password,
                     LastName = this.LastName,
                 };
-                userCrud.InsertUser();
-                return true;
+                bool message = userCrud.InsertUser();
+                if (message)
+                    return true;
+                else
+                    return false;
             }
             else
                 return false;

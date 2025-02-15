@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SHT.SHTBLL;
 
 namespace SHT
 {
@@ -24,11 +25,30 @@ namespace SHT
             designform.Sendkeys(e);
         }
 
-        private void enter_but_Click(object sender, EventArgs e)
+        private async void enter_but_Click(object sender, EventArgs e)
         {
-            FrmMainMenu frmMainMenu = new FrmMainMenu();
-            this.Hide();
-            frmMainMenu.ShowDialog();
+            User user = new User()
+            {
+                Password = TxtPassword.Text,
+                UserName = TxtUserName.Text,
+            };
+            bool message = await Task.Run(() =>
+            user.Select_EnrerUser()
+            );
+            if (message)
+            {
+                FrmMainMenu frmMainMenu = new FrmMainMenu();
+                this.Hide();
+                frmMainMenu.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "مقادیر را درست وارد کنید", "خطا"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error
+                                );
+            }
         }
 
         private void FrmEnter_FormClosing(object sender, FormClosingEventArgs e)

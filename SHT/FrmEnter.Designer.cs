@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.enter_but = new System.Windows.Forms.Button();
-            this.Password_txt = new System.Windows.Forms.TextBox();
-            this.UserName_Txt = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtUserName = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -102,26 +102,26 @@
             this.enter_but.Click += new System.EventHandler(this.enter_but_Click);
             this.enter_but.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShowPassword_Check_KeyPress);
             // 
-            // Password_txt
+            // TxtPassword
             // 
-            this.Password_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_txt.Location = new System.Drawing.Point(11, 60);
-            this.Password_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.Password_txt.Name = "Password_txt";
-            this.Password_txt.PasswordChar = '*';
-            this.Password_txt.Size = new System.Drawing.Size(98, 22);
-            this.Password_txt.TabIndex = 1;
-            this.Password_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShowPassword_Check_KeyPress);
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(11, 60);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '*';
+            this.TxtPassword.Size = new System.Drawing.Size(98, 22);
+            this.TxtPassword.TabIndex = 1;
+            this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShowPassword_Check_KeyPress);
             // 
-            // UserName_Txt
+            // TxtUserName
             // 
-            this.UserName_Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserName_Txt.Location = new System.Drawing.Point(11, 11);
-            this.UserName_Txt.Margin = new System.Windows.Forms.Padding(2);
-            this.UserName_Txt.Name = "UserName_Txt";
-            this.UserName_Txt.Size = new System.Drawing.Size(98, 22);
-            this.UserName_Txt.TabIndex = 0;
-            this.UserName_Txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShowPassword_Check_KeyPress);
+            this.TxtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUserName.Location = new System.Drawing.Point(11, 11);
+            this.TxtUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtUserName.Name = "TxtUserName";
+            this.TxtUserName.Size = new System.Drawing.Size(98, 22);
+            this.TxtUserName.TabIndex = 0;
+            this.TxtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShowPassword_Check_KeyPress);
             // 
             // password
             // 
@@ -156,8 +156,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.enter_but);
-            this.Controls.Add(this.Password_txt);
-            this.Controls.Add(this.UserName_Txt);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtUserName);
             this.Controls.Add(this.password);
             this.Controls.Add(this.name);
             this.Name = "FrmEnter";
@@ -176,8 +176,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button enter_but;
-        private System.Windows.Forms.TextBox Password_txt;
-        private System.Windows.Forms.TextBox UserName_Txt;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox TxtUserName;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label name;
     }
